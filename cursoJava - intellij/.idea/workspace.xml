@@ -14,12 +14,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -72,6 +73,7 @@
     "Application.configuracao.executor": "Run",
     "Application.dadosPessoas.executor": "Run",
     "Application.desafioPensionato.executor": "Run",
+    "Application.increaseSalary.executor": "Run",
     "Application.maisVelho.executor": "Run",
     "Application.mediaPares.executor": "Run",
     "Application.somaVetor.executor": "Run",
@@ -79,6 +81,7 @@
     "Notification.DoNotAsk-WindowsDefender": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/JV past/Curso POO - java/cursoJava - intellij",
     "onboarding.tips.debug.path": "C:/JV past/Curso POO - java/cursoJava - intellij/ArrayList e Matriz/src/Main.java",

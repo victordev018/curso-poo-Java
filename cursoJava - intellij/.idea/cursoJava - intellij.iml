@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/ArrayList e Matriz/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Date Time/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/EXERCISE_BANCO/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/objects exercises/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/static members/src" isTestSource="false" />

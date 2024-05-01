@@ -36,6 +36,10 @@ public class DateTime {
         DateTimeFormatter newFormat2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         LocalDateTime d09 = LocalDateTime.parse("24/06/2005 22:30", newFormat2);
 
+        // Criando datas e horários de maneira mais isolada com o método of();
+        LocalDate d10 = LocalDate.of(2005, 5, 23);      // ano, mês e dia
+        LocalDateTime d11 = LocalDateTime.of(2005, 5, 23, 14, 24);    //ano, mês, dia, hora e minuto
+
         // exbibindo Datas e Horários:
         System.out.println("D01: " + d01);
         System.out.println("D02: " + d02);
@@ -46,6 +50,8 @@ public class DateTime {
         System.out.println("D07: " + d07);
         System.out.println("D08: " + d08);
         System.out.println("D09: " + d09);
+        System.out.println("D10: " + d10);
+        System.out.println("D11: " + d11);
 
     }
 

@@ -5,6 +5,7 @@ import java.io.*;
 import java.time.Instant;  // -> Global(com fuso horário)
 import java.time.LocalDate;     //-> Local (data)
 import java.time.LocalDateTime;  // -> Local (Date e Time)
+import java.time.format.DateTimeFormatter;   // permite criar novos formatos de data-hora
 
 
 public class DateTime {
@@ -26,6 +27,15 @@ public class DateTime {
         Instant d06 = Instant.parse("2005-06-24T22:34:08Z");        // 'Z' indica o horário para o padrão GMT
         Instant d07 = Instant.parse("2005-06-24T22:34:08-03:00");   // -03:00 indica 3h a menos do padão GMT
 
+        // Criando datas com outro formato diferente do ISo8601
+        // para isso vamos instanciar um objeto da classe DateTimeFormaatter, que permite criar um novo formato aceito:
+
+        DateTimeFormatter newFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");    // para datas
+        LocalDate d08 = LocalDate.parse("24/06/2005", newFormat);     // precisa receber novo formato como parâmetro
+
+        DateTimeFormatter newFormat2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        LocalDateTime d09 = LocalDateTime.parse("24/06/2005 22:30", newFormat2);
+
         // exbibindo Datas e Horários:
         System.out.println("D01: " + d01);
         System.out.println("D02: " + d02);
@@ -34,6 +44,8 @@ public class DateTime {
         System.out.println("D05: " + d05);
         System.out.println("D06: " + d06);
         System.out.println("D07: " + d07);
+        System.out.println("D08: " + d08);
+        System.out.println("D09: " + d09);
 
     }
 

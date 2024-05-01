@@ -50,16 +50,16 @@ public class Main {
                 if (mat[i][j] == X){    // se elemento atual for igual a X
                     System.out.println("Position: " + i + "," + j + ":");  // exibe posição da ocorrência
 
-                    if (elementLess1(j, mat)) {                                    // tem elemento na esquerda?
+                    if (j != 0) {                                    // tem elemento na esquerda?
                         System.out.println("Left: " + mat[i][j-1]);
                     }
-                    if (elementMore1(j, mat)) {                                    // tem elemento na direita?
+                    if (j != mat[i].length - 1) {                    // tem elemento na direita?
                         System.out.println("Right: " + mat[i][j+1]);
                     }
-                    if (elementLess1(i, mat)){                                     // tem elemento em cima?
+                    if (i != 0){                                     // tem elemento em cima?
                         System.out.println("Up: " + mat[i-1][j]);
                     }
-                    if (elementMore1(i, mat)){                                     // tem elemento em baixo?
+                    if (i != mat.length - 1){                        // tem elemento em baixo?
                         System.out.println("Down: " + mat[i+1][j]);
                     }
                 }
@@ -68,21 +68,5 @@ public class Main {
         }
 
         in.close();
-    }
-
-    // verifica se é possível a existência do elemento a esquerda e em cima
-    public static boolean elementLess1(int e, int[][] mat){
-        if (e-1 >= 0 && e-1 <= mat.length ){
-            return true;
-        }
-        return false;
-    }
-
-    // verifica se é possível a existência do elemento na direita e em baixo
-    public static boolean elementMore1(int e, int[][] mat){
-        if (e+1 >= 0 && e+1 <= mat.length){
-            return true;
-        }
-        return false;
     }
 }

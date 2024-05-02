@@ -16,6 +16,7 @@ public class GlobalToLocal {
         // convertendo de Global para Lccal, usando o ofInstant(date-time, fuso-horário):
         // converte de Global para o Fuso da maquina, ou seja, o local:
         LocalDate r1 = LocalDate.ofInstant(d03,ZoneId.systemDefault());     // -3h
+        // converte de Global para o fuso de portugal:
         LocalDate r2 = LocalDate.ofInstant(d03,ZoneId.of("Portugal"));  // +1h
         LocalDateTime r3 = LocalDateTime.ofInstant(d03, ZoneId.systemDefault());  // -3h
         LocalDateTime r4 = LocalDateTime.ofInstant(d03, ZoneId.of("Portugal"));  // +1h
@@ -29,7 +30,7 @@ public class GlobalToLocal {
 
         // pegando elementos específicos de uma data:
         System.out.println("d01 dia: " + d01.getDayOfMonth());    // devolve o dia daquela data
-        System.out.println("d01 mês: " + d01.getMonthValue());         // devolve o dia daquela data
+        System.out.println("d01 mês: " + d01.getMonthValue());    // devolve o dia daquela data
         System.out.println("d01 ano: " + d01.getYear());          // devolve o dia daquela data
         System.out.println("Hora d02: " + d02.getHour());         // devolve a hora daquela data
     }

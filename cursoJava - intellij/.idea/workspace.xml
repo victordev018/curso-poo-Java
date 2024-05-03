@@ -63,6 +63,7 @@
     "Application.MaiorPosicao.executor": "Run",
     "Application.NegativosNUmbers.executor": "Run",
     "Application.NumerosPares.executor": "Run",
+    "Application.OperandoDateTime.executor": "Run",
     "Application.Program.executor": "Run",
     "Application.ProgramBank.executor": "Run",
     "Application.ProgramConvertDolar.executor": "Run",

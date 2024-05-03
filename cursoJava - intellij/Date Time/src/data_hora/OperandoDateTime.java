@@ -1,5 +1,6 @@
 package data_hora;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -36,5 +37,22 @@ public class OperandoDateTime {
         System.out.println("passWeekLocalDateTime: " + passWeekLocalDateTime);
         System.out.println("nextWeekInstant: " + nextWeekInstant);
         System.out.println("passWeekInstant: " + passWeekInstant);
+
+        // calculando durações:
+        // Para calcular durações temos de utilizar o método between(date1, date2) de Duration, e teremos
+        // um objeto de duração.
+
+        // nesse caso como se trata de duas LocalDate, não possuimios Time, então temos de indicar que
+        // essas datas são apartir do inicio do dia, ou seja 0h; usamos o método atStartOfDay;
+        Duration d1 = Duration.between(d01.atStartOfDay(), nextWeekLocalDate.atStartOfDay());
+        Duration d2 = Duration.between(d02, nextWeekLocalDateTime);
+        Duration d3 = Duration.between(d03, nextWeekInstant);
+        Duration d4 = Duration.between(nextWeekInstant, d03);
+
+        // exbibindo durações:
+        System.out.println("D1: " + d1.toDays());
+        System.out.println("D2: " + d2.toDays());
+        System.out.println("D3: " + d3.toDays());
+        System.out.println("D4: " + d4.toDays());
     }
 }

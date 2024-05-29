@@ -15,6 +15,7 @@
       <list>
         <option value="Interface" />
         <option value="module-info" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -89,7 +90,7 @@
     "git-widget-placeholder": "<unknown>",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/JV past/Curso POO - java/cursoJava - intellij",
-    "onboarding.tips.debug.path": "C:/JV past/Curso POO - java/cursoJava - intellij/Date Time/src/Main.java",
+    "onboarding.tips.debug.path": "C:/JV past/Curso POO - java/cursoJava - intellij/Enumeracoes/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

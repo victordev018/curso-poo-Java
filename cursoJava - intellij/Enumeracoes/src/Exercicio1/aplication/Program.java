@@ -47,6 +47,7 @@ public class Program {
 
             // instanciando novo contrato
             HourContract contract = new HourContract(contractDate, valuePerHour, hours);
+            worker.addContract(contract);
 
         }
 

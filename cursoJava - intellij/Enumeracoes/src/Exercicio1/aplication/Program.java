@@ -21,7 +21,7 @@ public class Program {
         // entrada de dados do trabalhador:
         System.out.print("Enter departament's name: ");
         String departamentName = in.nextLine();
-        System.out.print("Enter worker data:");
+        System.out.println("Enter worker data:");
         System.out.print("Name: ");
         String workerName = in.nextLine();
         System.out.print("Level: ");
@@ -50,6 +50,15 @@ public class Program {
             worker.addContract(contract);
 
         }
+
+        // calculando o salário do trabalhador em um dado mês
+        System.out.print("\nEnter month and year to calculate income (MM/YYYY): ");
+        String monhtAndYear = in.next();
+        int month = Integer.parseInt(monhtAndYear.substring(0, 2));
+        int year = Integer.parseInt(monhtAndYear.substring(3));
+        System.out.println("Name: " + worker.getName());
+        System.out.println("Departament: " + worker.getDepartament().getName());
+        System.out.println("Income for " + monhtAndYear + ": " + String.format("%.2f", worker.income(year, month)));
 
         in.close();
     }

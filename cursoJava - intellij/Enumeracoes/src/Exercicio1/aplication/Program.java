@@ -1,5 +1,9 @@
 package Exercicio1.aplication;
 
+import Exercicio1.entities.Departament;
+import Exercicio1.entities.Worker;
+import Exercicio1.entities.enums.WokerLevel;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -20,6 +24,8 @@ public class Program {
         System.out.print("Base salary: ");
         Double baseSalary = in.nextDouble();
 
+        // instanciando objtejo Worker com os dados lidos:
+        Worker worker = new Worker(workerName,WokerLevel.valueOf(workerLevel) , baseSalary, new Departament(departamentName));
 
         in.close();
     }

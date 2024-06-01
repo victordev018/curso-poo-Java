@@ -6,11 +6,12 @@
       <sourceFolder url="file://$MODULE_DIR$/ArrayList e Matriz/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Date Time/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/EXERCISE_BANCO/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Enumeracoes e Composicao/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Heranca e Polimorfismo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/objects exercises/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/static members/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vetores/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vetores/src/exercícios/exercise" isTestSource="false" packagePrefix="exercícios" />
-      <sourceFolder url="file://$MODULE_DIR$/Enumeracoes e Composicao/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

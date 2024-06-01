@@ -15,8 +15,8 @@
       <list>
         <option value="Interface" />
         <option value="module-info" />
-        <option value="Enum" />
         <option value="package-info" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>

@@ -5,7 +5,7 @@ public class Account {
     // atributos
     private Integer number;
     private String holder;
-    private Double balance;
+    protected Double balance;
 
     // construtores
     public Account(){

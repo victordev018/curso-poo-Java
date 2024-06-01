@@ -2,10 +2,15 @@ package Exercicio3.entities;
 
 import java.util.List;
 import java.util.ArrayList;
-import enums.OrderStatus;
+import Exercicio3.enums.OrderStatus;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Order {
+
+    // formato LocalDateTime:
+    private static final DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+    private static final DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     // atributos:
     private LocalDateTime moment;
@@ -68,5 +73,24 @@ public class Order {
         }
 
         return total;
+    }
+
+    // método to String:
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nORDER SUMARY:\n");
+        sb.append("Order moment: " + moment.format(fmt2)+ "\n");
+        sb.append("Order statud: " + status + "\n");
+        sb.append("Client: "+ client.getName() + " ("+client.getBirthDate().format(fmt3)+") - "+client.getEmail()+"\n");
+        sb.append("Order Items:\n");
+
+        for (OrderItem item: items){
+            sb.append(item.getProduct().getName()+", $"+String.format("%.2f", item.getPrice())+", Quantity: "
+            + item.getQuantity()+", Subtotal: "+ String.format("%.2f", item.subTotal())+"\n");
+        }
+
+        sb.append("Total price: $" + String.format("%.2f", total())+"\n");
+
+        return sb.toString();
     }
 }

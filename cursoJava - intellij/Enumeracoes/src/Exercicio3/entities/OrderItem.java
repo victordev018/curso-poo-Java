@@ -15,7 +15,7 @@ public class OrderItem {
     public OrderItem(int quantity, double price, Product product){
         this.product = product;
         this.quantity = quantity;
-        this.price = product.getPrice();
+        this.price = price;
     }
 
     // geters

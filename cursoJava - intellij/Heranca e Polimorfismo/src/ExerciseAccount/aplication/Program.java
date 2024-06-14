@@ -22,6 +22,27 @@ public class Program {
         Account acc1 = bacc;
         Account acc2 = new BusinessAccount(1003, "Mario", 0.0, 200.0);
         Account acc3 = new SavingsAccount(1004, "Caio", 0.0, 0.01);
+
+        // DOWNCASTING
+        BusinessAccount acc4 = (BusinessAccount) acc2;
+        acc4.loan(100.0);
+
+        // a linha abaico levantará uma exception ClassCastException, pois não é possivel converter uma SavingsAccount
+        // para BusinessAccount, logo é ideal fazer uma verificação
+        //BusinessAccount acc5 = (BusinessAccount) acc3;
+
+        if (acc3 instanceof BusinessAccount){
+            BusinessAccount acc5 = (BusinessAccount) acc3;
+            acc5.loan(200.0);
+            System.out.print("I'm BusinessAccount");
+        }
+
+        if (acc3 instanceof SavingsAccount){
+            SavingsAccount acc5 = (SavingsAccount) acc3;
+            acc5.uppdateBalance();
+            System.out.print("I'm SavingsAccount!");
+        }
     }
+
 
 }

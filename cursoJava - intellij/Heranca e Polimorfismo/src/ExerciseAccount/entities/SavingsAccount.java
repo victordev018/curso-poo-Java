@@ -25,7 +25,9 @@ public class SavingsAccount extends Account {
     }
 
     // métodos
+
+    // atualizando saldo da conta, adicionando o valor com juros aplicado
     public void uppdateBalance(){
-        balance -= balance * interestRate / 100.0;
+        balance += balance * interestRate;
     }
 }

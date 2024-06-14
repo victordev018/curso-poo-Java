@@ -54,6 +54,11 @@ public class Program {
         Account account2 = new SavingsAccount(321, "Felipe", 1000.0, 0.01);
         account2.withDraw(200.0);
         System.out.println("Balance account two: R$" + account2.getBalance());
+
+        // objeto do tipo BUsinessAccount, withDraw igual o da super (Account) + taxa de R$ 2.0
+        Account account3 = new BusinessAccount(456, "Carlos", 1000.0, 200.0);
+        account3.withDraw(200.0);
+        System.out.println("Balance account three: R$" + account3.getBalance());
     }
 
 

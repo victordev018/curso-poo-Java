@@ -34,14 +34,26 @@ public class Program {
         if (acc3 instanceof BusinessAccount){
             BusinessAccount acc5 = (BusinessAccount) acc3;
             acc5.loan(200.0);
-            System.out.print("I'm BusinessAccount");
+            System.out.println("I'm BusinessAccount");
         }
 
         if (acc3 instanceof SavingsAccount){
             SavingsAccount acc5 = (SavingsAccount) acc3;
             acc5.uppdateBalance();
-            System.out.print("I'm SavingsAccount!");
+            System.out.println("I'm SavingsAccount!");
         }
+
+        // experimentando o método withDraw nos dois tipos de classe
+
+        // objeto do tipo Account, withDraw possue taxa de R$ 5.00
+        Account account1 = new Account(123, "Pedro", 1000.0);
+        account1.withDraw(200.0);
+        System.out.println("Balance account one: R$" + account1.getBalance());
+
+        // objeto do tipo SavingsAccount, withDraw não possue taxa
+        Account account2 = new SavingsAccount(321, "Felipe", 1000.0, 0.01);
+        account2.withDraw(200.0);
+        System.out.println("Balance account two: R$" + account2.getBalance());
     }
 
 

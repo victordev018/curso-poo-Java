@@ -38,7 +38,8 @@ public class Account {
 
     // método para fazer um saque
     public void withDraw(Double amount){
-        this.balance -= amount;
+        double _rate = 5.0;
+        this.balance -= amount + _rate;
     }
 
     // método para realizar um depósito

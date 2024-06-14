@@ -30,4 +30,12 @@ public class SavingsAccount extends Account {
     public void uppdateBalance(){
         balance += balance * interestRate;
     }
+
+    // criando uma sobreposição de método  withdrw da super classe, fazendo com que nesse tipo de conta
+    // não seja descontado a taxa
+
+    @Override   // a notação Override indica que o método abaixo é uma sobreposição da super classe
+    public void withDraw(Double amount){
+        balance -= amount;
+    }
 }

@@ -30,4 +30,13 @@ public class BusinessAccount extends Account{
             balance += amount - 10.0;
         }
     }
+
+    // criando uma sobreposição de método  withdrw da super classe, fazendo com que nesse tipo de conta
+    // seja realizada a withDraw da super classe e implemente uma texa a mais de R$ 2.0
+
+    @Override
+    public void withDraw(Double amount){
+        super.withDraw(amount);
+        balance -= 2.0;
+    }
 }

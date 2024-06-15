@@ -59,6 +59,21 @@ public class Program {
         Account account3 = new BusinessAccount(456, "Carlos", 1000.0, 200.0);
         account3.withDraw(200.0);
         System.out.println("Balance account three: R$" + account3.getBalance());
+
+        // POLIMORFISMO - muitas formas, fazer com que variáveis do mesmo tipo tenham comportamentos diferentes
+        // quando acionado seus métodos, isso por conta do tipo de Classe daquele objeto no momento da instanciação
+
+        // instanciando objetos numa varíável do tipo Account, porém de instâncias diferentes
+        Account a1 = new Account(546, "José", 100.0);
+        Account a2 = new SavingsAccount(321, "Rick", 100.0, 0.01);
+
+        // realizando saque para cada um dos objetos
+        a1.withDraw(50.0);
+        a2.withDraw(50.0);
+
+        // exibindo valores de saldo dos objetos após a retirada
+        System.out.println("Balance a1: R$"+a1.getBalance());
+        System.out.println("Balance a2: R$"+a2.getBalance());
     }
 
 

@@ -11,8 +11,9 @@ public class OutsourcedEmployee extends Employee {
         super();
     }
 
-    public OutsourcedEmployee(String name, Integer hours, Double valuePerHour){
+    public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge){
         super(name, hours, valuePerHour);
+        this.additionalCharge = additionalCharge;
     }
 
     // get e set
@@ -23,8 +24,9 @@ public class OutsourcedEmployee extends Employee {
     // métodos
 
     // criando sobreposição do método payment da super classe
+    @Override
     public double payment(){
         // retorna a quantidade de hora pelo o valor de hora mais 110% do adicional
-        return hours * valuePerHour + additionalCharge*1.1;
+        return super.payment() + additionalCharge*1.1;
     }
 }

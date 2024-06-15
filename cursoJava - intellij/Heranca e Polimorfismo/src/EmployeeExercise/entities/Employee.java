@@ -4,8 +4,8 @@ public class Employee {
 
     // atributos
     private String name;
-    private Integer hours;
-    private Double valuePerHour;
+    protected Integer hours;
+    protected Double valuePerHour;
 
     // construtores
     public Employee (){

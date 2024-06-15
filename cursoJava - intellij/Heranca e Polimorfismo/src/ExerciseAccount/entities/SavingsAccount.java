@@ -1,6 +1,7 @@
 package ExerciseAccount.entities;
 
-public class SavingsAccount extends Account {
+// a palavra final indica que a classe não pode ser herdada
+public final class SavingsAccount extends Account {
 
     // atributos
     private Double interestRate;    // taxa de juros
@@ -35,7 +36,7 @@ public class SavingsAccount extends Account {
     // não seja descontado a taxa
 
     @Override   // a notação Override indica que o método abaixo é uma sobreposição da super classe
-    public void withDraw(Double amount){
+    public final void withDraw(Double amount){  // final indica que o meétodo não pode ser sobreposto
         balance -= amount;
     }
 }

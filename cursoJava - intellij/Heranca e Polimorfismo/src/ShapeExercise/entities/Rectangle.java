@@ -1,5 +1,7 @@
 package ShapeExercise.entities;
 
+import ShapeExercise.entities.enums.Color;
+
 public class Rectangle extends Shape{
 
     // atributos
@@ -10,7 +12,8 @@ public class Rectangle extends Shape{
     public Rectangle(){
     }
 
-    public Rectangle (Double width, Double height){
+    public Rectangle (Color color ,Double width, Double height){
+        super(color);
         this.width = width;
         this.height = height;
     }

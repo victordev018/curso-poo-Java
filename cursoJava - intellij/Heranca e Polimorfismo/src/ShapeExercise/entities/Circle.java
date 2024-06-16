@@ -1,5 +1,7 @@
 package ShapeExercise.entities;
 
+import ShapeExercise.entities.enums.Color;
+
 public class Circle extends Shape{
 
     // atributos
@@ -9,7 +11,10 @@ public class Circle extends Shape{
     public Circle(){
     }
 
-    public Circle (Double radius){this.radius = radius;}
+    public Circle (Color color, Double radius){
+        super(color);
+        this.radius = radius;
+    }
 
     // get e set
     public Double getRadius(){ return radius;}

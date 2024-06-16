@@ -16,8 +16,8 @@
         <option value="Interface" />
         <option value="module-info" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>

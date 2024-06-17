@@ -53,8 +53,8 @@ public class Account {
         if (amount > withdrawLimit){
             throw new WithdrawException("The amount exceeds withdraw limit");
         }
-        // se não houver saldo na conta, será lançada uma exceção
-        if (balance <= 0.0){
+        // se o valor de saque for maior que o saldo, será lançada uma exceção
+        if (amount > balance){
             throw new WithdrawException("Not enough balance");
         }
         this.balance -= amount;

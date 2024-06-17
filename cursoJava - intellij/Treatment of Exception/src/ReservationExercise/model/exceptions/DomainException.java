@@ -1,4 +1,4 @@
-package model.exceptions;
+package ReservationExercise.model.exceptions;
 
 public class DomainException extends RuntimeException {
     // definindo a versão do serialVersinUID

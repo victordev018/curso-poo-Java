@@ -1,4 +1,5 @@
 package WithdrawExercise.model.entities;
+import WithdrawExercise.model.exceptions.WithdrawException;
 
 public class Account {
 
@@ -48,6 +49,14 @@ public class Account {
 
     // método para efetuar saque
     public void withdraw(Double amount){
+        // se a quantia de saque for maior que o limite de saque, será lançada uma exceção
+        if (amount > withdrawLimit){
+            throw new WithdrawException("The amount exceeds withdraw limit");
+        }
+        // se não houver saldo na conta, será lançada uma exceção
+        if (balance <= 0.0){
+            throw new WithdrawException("Not enough balance");
+        }
         this.balance -= amount;
     }
 }

@@ -47,7 +47,7 @@ public class Account {
     }
 
     // método para efetuar saque
-    public Double withdraw(Double amount){
+    public void withdraw(Double amount){
         this.balance -= amount;
     }
 }

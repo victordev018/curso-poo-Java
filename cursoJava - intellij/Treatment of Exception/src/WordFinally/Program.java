@@ -12,10 +12,12 @@ public class Program {
 
         try{
             sc = new Scanner(file);
+            // enquanto exitsir uma próxima linha no arquivo para ser feita a leitura
             while (sc.hasNextLine()){
                 System.out.println(sc.nextLine());
             }
         }
+        // caso não encontre o arquivo especificado
         catch (FileNotFoundException e ){
             System.out.println("Error oppening file: "+e.getMessage());
         }
@@ -24,7 +26,7 @@ public class Program {
             if (sc != null){
                 sc.close();
             }
-            System.out.println("Finally block exectud!");
+            System.out.println("Finally block exected!");
         }
 
     }

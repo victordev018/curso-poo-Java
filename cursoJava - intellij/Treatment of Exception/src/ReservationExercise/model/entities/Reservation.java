@@ -48,7 +48,7 @@ public class Reservation {
 
     // método que retorna a duração em dias das datas de entrada e saída
     public long duration(){
-        Duration duration = Duration.between(checkin, checkout);
+        Duration duration = Duration.between(checkin.atStartOfDay(), checkout.atStartOfDay());
         return duration.toDays();
     }
 

@@ -12,25 +12,25 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner in = new Scanner(System.in);
 
+        // funcionamento principal do programa
+
+        // lendo dados da conta
+        System.out.println("Enter account data:");
+        System.out.print("Number: ");
+        int number = in.nextInt();
+        System.out.print("Holder: ");
+        in.nextLine();
+        String holder = in.nextLine();
+        System.out.print("Initial balance: ");
+        Double balance = in.nextDouble();
+        System.out.print("Withdraw limit: ");
+        Double withdrawLimit = in.nextDouble();
+
+        // instanciando conta com os dados informados
+        Account account = new Account(number, holder, balance, withdrawLimit);
+
         // tente executar este bloco de código
         try {
-            // funcionamento principal do programa
-
-            // lendo dados da conta
-            System.out.println("Enter account data:");
-            System.out.print("Number: ");
-            int number = in.nextInt();
-            System.out.print("Holder: ");
-            in.nextLine();
-            String holder = in.nextLine();
-            System.out.print("Initial balance: ");
-            Double balance = in.nextDouble();
-            System.out.print("Withdraw limit: ");
-            Double withdrawLimit = in.nextDouble();
-
-            // instanciando conta com os dados informados
-            Account account = new Account(number, holder, balance, withdrawLimit);
-
             // Solicitando saque
             System.out.print("\nEnter amount for withdraw: ");
             account.withdraw(in.nextDouble());

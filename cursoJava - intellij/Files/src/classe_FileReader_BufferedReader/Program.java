@@ -11,16 +11,11 @@ public class Program {
         String path = "c:\\temp\\in.txt";
 
         // objeto da classe FileReader, lê um caractere por vez de um arquivo
-        FileReader fr = null;
         // objeto da classe BufferedReader, melhor desempenho de leitura de arquivos
-        BufferedReader br = null;
 
-        try {
-            // passando caminho do arquivo para o objeto fr
-            fr = new FileReader(path);
-            // passando fr para o objteo br
-            br = new BufferedReader(fr);
-
+        // o try-with-resource (try com recurso), pode instanciar os objetos no argumento.
+        // esse tipo de try garante que os objetos sejam fechados ao finalizar
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             // método readLine() lê uma linha do arquivo, se estiver no final retorna nulo
             String line = br.readLine();
 
@@ -36,25 +31,5 @@ public class Program {
         catch (IOException e){
             System.out.println("Error: " + e.getMessage());
         }
-        finally {
-            // tente fechar os arquivos
-            try {
-                // se o arquivo tiver algum valor
-                if (br != null){
-                    // feche o arquivo
-                    br.close();
-                }
-                // se orquivo tiver algum valor
-                if (fr != null){
-                    // feche o arquivo
-                    fr.close();
-                }
-            }
-            // caso dê exceção ao fechar os arquivos
-            catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-
     }
 }

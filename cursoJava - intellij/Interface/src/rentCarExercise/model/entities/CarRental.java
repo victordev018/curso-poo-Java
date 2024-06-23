@@ -3,7 +3,7 @@ package rentCarExercise.model.entities;
 import java.time.LocalDateTime;
 
 // classe referente ao aluguel de carro
-public class CarRenter {
+public class CarRental {
 
     // atributos
     private LocalDateTime start;    // hora de inicio
@@ -14,14 +14,13 @@ public class CarRenter {
     private Invoice invoice;    // fatura
 
     // construtor
-    public CarRenter(){
+    public CarRental(){
     }
 
-    public CarRenter(LocalDateTime start, LocalDateTime finish, Vehicle vehicle, Invoice invoice) {
+    public CarRental(LocalDateTime start, LocalDateTime finish, Vehicle vehicle) {
         this.start = start;
         this.finish = finish;
         this.vehicle = vehicle;
-        this.invoice = invoice;
     }
 
     // get e set

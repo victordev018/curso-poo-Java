@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Program {
     public static void main(String[] args){
-        // vetor de conteuno a ser escrito nos arquivos
+        // vetor de conteúdo a ser escrito nos arquivos
         String[] lines = new String[]{
                 "Good Morning",
                 "Good afternoon",

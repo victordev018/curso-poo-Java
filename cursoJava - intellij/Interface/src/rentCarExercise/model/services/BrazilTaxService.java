@@ -1,7 +1,7 @@
 package rentCarExercise.model.services;
 
-// serviço sobre o imposto no brazil
-public class BrazilTaxService {
+// serviço sobre o imposto no brazil, que implementa a interface TaxService
+public class BrazilTaxService implements TaxService{
 
     // método que retorna a quantia de imposto baseado em uma quantidade recebida
     public double tax(double amount){

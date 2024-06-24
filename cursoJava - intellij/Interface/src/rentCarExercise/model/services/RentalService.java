@@ -12,11 +12,11 @@ public class RentalService {
     private Double pricePerHour;    // preço por hora
     private Double pricePerDay;     // preço por dia
 
-    // composição
-    private BrazilTaxService taxService;    // seriço de imposto
+    // a classe terá dependência de um TaxService (uma interface genérica)
+    private TaxService taxService;    // seriço de imposto
 
     // construtor
-    public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService taxService) {
+    public RentalService(Double pricePerHour, Double pricePerDay, TaxService taxService) {
         this.pricePerHour = pricePerHour;
         this.pricePerDay = pricePerDay;
         this.taxService = taxService;

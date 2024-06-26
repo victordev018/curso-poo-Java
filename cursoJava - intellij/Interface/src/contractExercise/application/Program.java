@@ -1,6 +1,10 @@
 package contractExercise.application;
 
 import contractExercise.model.entities.Contract;
+import contractExercise.model.entities.Installment;
+import contractExercise.model.services.ContractService;
+import contractExercise.model.services.OnlinePaymentService;
+import contractExercise.model.services.PaypalService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -27,6 +31,18 @@ public class Program {
 
         // instanciando novo contrato
         Contract contract = new Contract(number, date, totalValue);
+
+        // instanciando serviço de contrato
+        ContractService service = new ContractService(new PaypalService());
+
+        // processando o contrato com o serviço de contrato
+        service.processContract(contract, numberInstallments);
+
+        // exibindo os dados de cada uma das parcelas para este contrato
+        System.out.println("Installments:");
+        for (Installment installment : contract.getInstallments()){
+            System.out.println(installment);
+        }
 
         in.close();
     }

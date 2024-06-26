@@ -11,6 +11,11 @@ public class ContractService {
     // declaração de dependência
     private OnlinePaymentService onlinePaymentService;
 
+    // construtor
+    public ContractService(OnlinePaymentService onlinePaymentService) {
+        this.onlinePaymentService = onlinePaymentService;
+    }
+
     // método para processar as parcelas do contrato
     public void processContract(Contract contract, int months){
         // criando as parcelas de acordo com o numero de months

@@ -53,5 +53,4 @@ public class Contract {
     public List<Installment> getInstallments() {
         return installments;
     }
-
 }

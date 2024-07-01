@@ -15,7 +15,7 @@ public class PrintService<Type> {
     }
 
     // método para pegar o primeiro valor da lista
-    public Type firs(){
+    public Type first(){
         // se a lista estiver vazia
         if (list.isEmpty()){
             throw new IllegalStateException("Value not fund");
@@ -25,7 +25,7 @@ public class PrintService<Type> {
 
     // método para printar a lista
     public void print(){
-        System.out.println("[");
+        System.out.print("[");
         if (!list.isEmpty()){
             System.out.print(list.get(0));
         }

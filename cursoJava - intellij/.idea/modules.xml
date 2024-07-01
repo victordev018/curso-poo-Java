@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GENERICS-SET-MAP/GENERICS-SET-MAP.iml" filepath="$PROJECT_DIR$/GENERICS-SET-MAP/GENERICS-SET-MAP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cursoJava - intellij.iml" filepath="$PROJECT_DIR$/.idea/cursoJava - intellij.iml" />
     </modules>
   </component>

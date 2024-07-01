@@ -17,10 +17,9 @@ public class Client {
     public Client(){
     }
 
-    public Client(String name, String cpf, List<Account> listOfAccounts) {
+    public Client(String name, String cpf) {
         this.name = name;
         this.cpf = cpf;
-        this.listOfAccounts = listOfAccounts;
     }
 
     // get e set

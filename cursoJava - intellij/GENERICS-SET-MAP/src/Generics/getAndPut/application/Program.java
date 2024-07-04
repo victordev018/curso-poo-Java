@@ -17,6 +17,8 @@ public class Program {
     }
 
     // método para copiar dados de um lista  para outra
+    // source: exemplo de coovariância -> pode ser acessado porém não modificado
+    // destiny: exemplo de contravariãncia -> pode ser modificada porém não acessada
     public static void copy(List<? extends  Number> source, List<? super Number> destiny){
 //        destiny.addAll(source);
         for (Number number : source){

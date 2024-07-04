@@ -6,6 +6,15 @@ public class Rectangle implements Shape{
     private double width;   // largura
     private double height;  // altura
 
+    // construtor
+    public Rectangle(){
+    }
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
     // get e set
     public double getWidth() {
         return width;

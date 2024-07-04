@@ -7,6 +7,14 @@ public class Circle implements Shape{
     // atributos
     private double radius;  // raio
 
+    // construtores
+    public Circle(){
+    }
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
     // get e set
     public double getRadius(){return radius;}
 

@@ -34,16 +34,18 @@ public class Client {
         this.email = email;
     }
 
+    // sobreposição do método de comparação entre os objetos desta classe
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Client client = (Client) o;
-        return Objects.equals(name, client.name);
+        return Objects.equals(name, client.name) && Objects.equals(email, client.email);
     }
 
+    // sobreposição do método que gera um hashCode para o objeto, para permitir a comparação entre os objetos
     @Override
     public int hashCode() {
-        return Objects.hashCode(name);
+        return Objects.hash(name, email);
     }
 }

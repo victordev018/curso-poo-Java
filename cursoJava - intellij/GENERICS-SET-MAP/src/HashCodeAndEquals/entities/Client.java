@@ -1,5 +1,7 @@
 package HashCodeAndEquals.entities;
 
+import java.util.Objects;
+
 public class Client {
 
     // atributos
@@ -30,5 +32,18 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return Objects.equals(name, client.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
     }
 }

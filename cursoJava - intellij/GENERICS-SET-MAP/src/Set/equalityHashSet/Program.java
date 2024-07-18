@@ -1,4 +1,4 @@
-package Set.comparationHash;
+package Set.equalityHashSet;
 
 import java.util.HashSet;
 import java.util.Locale;

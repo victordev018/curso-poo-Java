@@ -59,6 +59,7 @@
     "Application.DateTime.executor": "Run",
     "Application.ForEach.executor": "Run",
     "Application.GlobalToLocal.executor": "Run",
+    "Application.List.executor": "Run",
     "Application.Lista.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MaiorPosicao.executor": "Run",

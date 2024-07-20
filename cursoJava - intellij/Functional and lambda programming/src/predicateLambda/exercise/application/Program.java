@@ -19,12 +19,9 @@ public class Program {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        // declarando uma expressão lambda em um objeto do tipo Predicate
-        Predicate<Product> predicate = p -> p.getPrice() >= 100.0;
-
         // removendo produtos da lista que atenda a um predicado(método removeIf(Predicate) recebe um predicado
         // como argumento
-        list.removeIf(predicate);
+        list.removeIf(p -> p.getPrice() >= 100.0);
 
         // imprimindo a lista de produtos
         for (Product p : list){

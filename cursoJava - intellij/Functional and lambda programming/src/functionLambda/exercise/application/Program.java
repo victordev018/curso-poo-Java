@@ -22,7 +22,7 @@ public class Program {
         // criando uma nova lista com os nomes dos produtos de list, em caixa alta
         // a função map(Function<T, R>), aplica uma função para cada elemento de uma stream
 
-        List<String> names =  list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+        List<String> names =  list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 
         // exibindo a lista de nomes de produtos
         names.forEach(System.out::println);

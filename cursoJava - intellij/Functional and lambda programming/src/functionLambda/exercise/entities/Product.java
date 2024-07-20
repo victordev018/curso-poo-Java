@@ -33,6 +33,11 @@ public class Product {
         return p.getName().toUpperCase();
     }
 
+    // método nãp estático que recebe um produto e e retorna uma String com o nome do produto em caixa alta
+    public String nonStaticUpperCaseName(){
+        return this.name.toUpperCase();
+    }
+
     // sobreposição do método toString()
     @Override
     public String toString(){

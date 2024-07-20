@@ -28,6 +28,11 @@ public class Product {
         this.price = price;
     }
 
+    // método estático que recebe um produto e e retorna uma String com o nome do produto em caixa alta
+    public static String staticUpperCaseName(Product p){
+        return p.getName().toUpperCase();
+    }
+
     // sobreposição do método toString()
     @Override
     public String toString(){

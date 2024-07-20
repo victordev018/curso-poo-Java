@@ -20,13 +20,10 @@ public class Program {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        // declarando uma expressão lamda de Function
-        Function<Product, String> func = p -> p.getName().toUpperCase();
-
         // criando uma nova lista com os nomes dos produtos de list, em caixa alta
         // a função map(Function<T, R>), aplica uma função para cada elemento de uma stream
 
-        List<String> names =  list.stream().map(func).collect(Collectors.toList());
+        List<String> names =  list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 
         // exibindo a lista de nomes de produtos
         names.forEach(System.out::println);

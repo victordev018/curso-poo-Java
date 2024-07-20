@@ -20,7 +20,7 @@ public class Program {
 
         // removendo produtos da lista que atenda a um predicado(método removeIf(Predicate) recebe um predicado
         // como argumento
-        list.removeIf(Product::staticProductPredicate);
+        list.removeIf(Product::nonStaticProductPredicate);
 
         // imprimindo a lista de produtos
         for (Product p : list){

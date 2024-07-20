@@ -33,6 +33,11 @@ public class Product {
         return product.getPrice() >= 100.0;
     }
 
+    // método não estático que verifica se um determinado produto possue preço maior ou igual a R$ 100.0
+    public boolean nonStaticProductPredicate(){
+        return this.price >= 100.0;
+    }
+
     // sobreposição do método toString()
     @Override
     public String toString(){

@@ -28,6 +28,11 @@ public class Product {
         this.price = price;
     }
 
+    // método estático que verifica se um determinado produto possue preço maior ou igual a R$ 100.0
+    public static boolean staticProductPredicate(Product product){
+        return product.getPrice() >= 100.0;
+    }
+
     // sobreposição do método toString()
     @Override
     public String toString(){

@@ -1,4 +1,4 @@
-package ProductExercise.application;
+package exerciseProduct.application;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -6,9 +6,9 @@ import java.util.Locale;
 import java.util.List;
 import java.util.ArrayList;
 
-import ProductExercise.entities.ImportedProduct;
-import ProductExercise.entities.Product;
-import ProductExercise.entities.UsedProduct;
+import exerciseProduct.entities.ImportedProduct;
+import exerciseProduct.entities.Product;
+import exerciseProduct.entities.UsedProduct;
 
 public class Program {
 

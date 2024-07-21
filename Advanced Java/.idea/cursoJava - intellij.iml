@@ -15,8 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Objects exercises/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Static members/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Treatment of Exception/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/vetores/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/vetores/src/exercícios/exercise" isTestSource="false" packagePrefix="exercícios" />
+      <sourceFolder url="file://$MODULE_DIR$/Vectors/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vectors/src/exercícios/exercise" isTestSource="false" packagePrefix="exercícios" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

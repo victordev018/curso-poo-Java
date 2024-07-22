@@ -3,9 +3,7 @@ package db;
 import javax.swing.*;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 public class DB {
@@ -60,6 +58,36 @@ public class DB {
         }
         catch (IOException e){
             throw new DbException(e.getMessage());
+        }
+    }
+
+    // método para finalizar/ fechar um statement
+    public static void closeStatement(Statement statement){
+
+        // verificando se o statement possui conteúdo
+        if (statement != null){
+            try {
+                // fecha o statement
+                statement.close();
+            }
+            catch (SQLException e){
+                throw new DbException(e.getMessage());
+            }
+        }
+    }
+
+    // método para finalizar/ fechar um resultSet
+    public static void closeResultSet(ResultSet result){
+
+        // verificando se o result possui conteúdo
+        if (result != null){
+            try {
+                // fecha o resultSet
+                result.close();
+            }
+            catch (SQLException e){
+                throw new DbException(e.getMessage());
+            }
         }
     }
 }

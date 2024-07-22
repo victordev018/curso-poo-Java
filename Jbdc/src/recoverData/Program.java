@@ -33,5 +33,10 @@ public class Program {
         catch (SQLException e){
             throw new DbException(e.getMessage());
         }
+        finally {
+            DB.closeResultSet(result);
+            DB.closeStatement(statement);
+            DB.closeConnection();
+        }
     }
 }
